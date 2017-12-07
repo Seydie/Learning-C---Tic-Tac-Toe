@@ -46,13 +46,25 @@ namespace WindowsFormsApp2
                 Button b = sender as Button;
                 MessageBox.Show(b.Text);
                 b.Text = "";
-                if (1 < 0)
+                if (Player1 == true && Player2 == false)
                 {
+                    b.Text = "X";
                     MessageBox.Show("Gewonnen!");
                 }
                 else
                 {
+                    b.Text = "0";
                     MessageBox.Show("Verloren!");
+                }
+                if(Player1 == true && Player2 == false)
+                {
+                    bool Player1 = false;
+                    bool Player2 = true;
+                }
+                else
+                {
+                    bool Player1 = true;
+                    bool Player2 = false;
                 }
             }
             else

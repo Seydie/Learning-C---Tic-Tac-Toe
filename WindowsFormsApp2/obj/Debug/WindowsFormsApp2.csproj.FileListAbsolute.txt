@@ -8,3 +8,13 @@ C:\Users\Kayleigh\Documents\Visual Studio 2017\Projects\WindowsFormsApp2\Windows
 C:\Users\Kayleigh\Documents\Visual Studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
 C:\Users\Kayleigh\Documents\Visual Studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\Kayleigh\Documents\Visual Studio 2017\Projects\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\kelyv\Desktop\werkmak\Learning-C-TicTacToe\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\kelyv\Desktop\werkmak\Learning-C-TicTacToe\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\kelyv\Desktop\werkmak\Learning-C-TicTacToe\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\kelyv\Desktop\werkmak\Learning-C-TicTacToe\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form.resources
+C:\Users\kelyv\Desktop\werkmak\Learning-C-TicTacToe\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\kelyv\Desktop\werkmak\Learning-C-TicTacToe\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.Cache
+C:\Users\kelyv\Desktop\werkmak\Learning-C-TicTacToe\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\kelyv\Desktop\werkmak\Learning-C-TicTacToe\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\kelyv\Desktop\werkmak\Learning-C-TicTacToe\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\kelyv\Desktop\werkmak\Learning-C-TicTacToe\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojResolveAssemblyReference.cache
