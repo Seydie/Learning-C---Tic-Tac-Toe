@@ -51,7 +51,7 @@ namespace WindowsFormsApp2
                 }
                 else
                 {
-                    b.Text = "0";
+                    b.Text = "O";
                     Player1 = true;
                 }
             }
