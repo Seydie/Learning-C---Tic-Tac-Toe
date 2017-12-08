@@ -49,9 +49,11 @@ namespace WindowsFormsApp2
                     b.Text = "X";
                     Player1 = false;
                 }
-                else if (b.Text == "X" || b.Text == "O") {
-                    MessageBox.Show("Oops!");
+
+                else if (b.Text == "X" || b.Text == "O")
+                {
                 }
+
                 else
                 {
                     b.Text = "O";
@@ -60,42 +62,47 @@ namespace WindowsFormsApp2
 
                 if ((b1.Text == "X" && b2.Text == "X" && b3.Text == "X") || (b1.Text == "X" && b4.Text == "X" && b7.Text == "X") || (b1.Text == "X" && b5.Text == "X" && b9.Text == "X") || (b2.Text == "X" && b5.Text == "X" && b8.Text == "X") || (b3.Text == "X" && b5.Text == "X" && b7.Text == "X") || (b3.Text == "X" && b6.Text == "X" && b9.Text == "X") || (b7.Text == "X" && b8.Text == "X" && b9.Text == "X") || (b4.Text == "X" && b5.Text == "X" && b6.Text == "X"))
                 {
-                    MessageBox.Show("Player 1 win!");
-                    b1.Text = "";
-                    b2.Text = "";
-                    b3.Text = "";
-                    b4.Text = "";
-                    b5.Text = "";
-                    b6.Text = "";
-                    b7.Text = "";
-                    b8.Text = "";
-                    b9.Text = "";
+                    MessageBox.Show("Player 1 won!");
+                    EmptyBoard();
                     Player1 = false;
                 }
+
                 if ((b1.Text == "O" && b2.Text == "O" && b3.Text == "O") || (b1.Text == "O" && b4.Text == "O" && b7.Text == "O") || (b1.Text == "O" && b5.Text == "O" && b9.Text == "O") || (b2.Text == "O" && b5.Text == "O" && b8.Text == "O") || (b3.Text == "O" && b5.Text == "O" && b7.Text == "O") || (b3.Text == "O" && b6.Text == "O" && b9.Text == "O") || (b7.Text == "O" && b8.Text == "O" && b9.Text == "O") || (b4.Text == "O" && b5.Text == "O" && b6.Text == "O"))
                 {
-                    MessageBox.Show("Player 2 win!");
-                    b1.Text = "";
-                    b2.Text = "";
-                    b3.Text = "";
-                    b4.Text = "";
-                    b5.Text = "";
-                    b6.Text = "";
-                    b7.Text = "";
-                    b8.Text = "";
-                    b9.Text = "";
+                    MessageBox.Show("Player 2 won!");
+                    EmptyBoard();
                     Player1 = true;
                 }
+                if (b1.Text != "" && b2.Text != "" && b3.Text != "" && b4.Text != "" && b5.Text != "" && b6.Text != "" && b7.Text != "" && b8.Text != "" && b9.Text != "")
+                {
+                    DialogResult dialogResult = MessageBox.Show("You want to play another game?", "No winner", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        EmptyBoard();
+                        Player1 = true;
+                    }
+
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        Application.Exit();
+                    }
+                }
             }
+
             else
             {
                 MessageBox.Show("Oops! Something went wrong!");
                 Application.Exit();
-            }
-               
+            }   
         }
 
         private void bretry_Click(object sender, EventArgs e)
+        {
+            EmptyBoard();
+            Player1 = true;
+        }
+
+        public void EmptyBoard()
         {
             b1.Text = "";
             b2.Text = "";
@@ -106,7 +113,6 @@ namespace WindowsFormsApp2
             b7.Text = "";
             b8.Text = "";
             b9.Text = "";
-            Player1 = true;
         }
     }
 }
