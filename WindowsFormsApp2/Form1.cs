@@ -13,7 +13,6 @@ namespace WindowsFormsApp2
     public partial class Form : System.Windows.Forms.Form
     {
         bool Player1 = true;
-        bool Player2 = false;
 
         public Form()
         {
@@ -44,27 +43,16 @@ namespace WindowsFormsApp2
             if (sender is Button)
             {
                 Button b = sender as Button;
-                MessageBox.Show(b.Text);
-                b.Text = "";
-                if (Player1 == true && Player2 == false)
+
+                if (Player1 == true)
                 {
                     b.Text = "X";
-                    MessageBox.Show("Gewonnen!");
+                    Player1 = false;
                 }
                 else
                 {
                     b.Text = "0";
-                    MessageBox.Show("Verloren!");
-                }
-                if(Player1 == true && Player2 == false)
-                {
-                    bool Player1 = false;
-                    bool Player2 = true;
-                }
-                else
-                {
-                    bool Player1 = true;
-                    bool Player2 = false;
+                    Player1 = true;
                 }
             }
             else
