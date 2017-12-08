@@ -13,10 +13,13 @@ namespace WindowsFormsApp2
     public partial class Form : System.Windows.Forms.Form
     {
         bool Player1 = true;
+        int ScoreX = 0;
+        int ScoreO = 0;
 
         public Form()
         {
             InitializeComponent();
+            ScoreBoard();
             b1.Click += ClickCheck;
             b2.Click += ClickCheck;
             b3.Click += ClickCheck;
@@ -63,6 +66,7 @@ namespace WindowsFormsApp2
                 if ((b1.Text == "X" && b2.Text == "X" && b3.Text == "X") || (b1.Text == "X" && b4.Text == "X" && b7.Text == "X") || (b1.Text == "X" && b5.Text == "X" && b9.Text == "X") || (b2.Text == "X" && b5.Text == "X" && b8.Text == "X") || (b3.Text == "X" && b5.Text == "X" && b7.Text == "X") || (b3.Text == "X" && b6.Text == "X" && b9.Text == "X") || (b7.Text == "X" && b8.Text == "X" && b9.Text == "X") || (b4.Text == "X" && b5.Text == "X" && b6.Text == "X"))
                 {
                     MessageBox.Show("Player 1 won!");
+                    ScoreX++;
                     EmptyBoard();
                     Player1 = false;
                 }
@@ -70,6 +74,7 @@ namespace WindowsFormsApp2
                 if ((b1.Text == "O" && b2.Text == "O" && b3.Text == "O") || (b1.Text == "O" && b4.Text == "O" && b7.Text == "O") || (b1.Text == "O" && b5.Text == "O" && b9.Text == "O") || (b2.Text == "O" && b5.Text == "O" && b8.Text == "O") || (b3.Text == "O" && b5.Text == "O" && b7.Text == "O") || (b3.Text == "O" && b6.Text == "O" && b9.Text == "O") || (b7.Text == "O" && b8.Text == "O" && b9.Text == "O") || (b4.Text == "O" && b5.Text == "O" && b6.Text == "O"))
                 {
                     MessageBox.Show("Player 2 won!");
+                    ScoreO++;
                     EmptyBoard();
                     Player1 = true;
                 }
@@ -113,6 +118,10 @@ namespace WindowsFormsApp2
             b7.Text = "";
             b8.Text = "";
             b9.Text = "";
+        }
+        public void ScoreBoard()
+        {
+            score.Text = "Score: X = " + ScoreX + " | O = " + ScoreO;
         }
     }
 }
