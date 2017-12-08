@@ -19,7 +19,6 @@ namespace WindowsFormsApp2
         public Form()
         {
             InitializeComponent();
-            ScoreBoard();
             b1.Click += ClickCheck;
             b2.Click += ClickCheck;
             b3.Click += ClickCheck;
@@ -80,7 +79,7 @@ namespace WindowsFormsApp2
                 }
                 if (b1.Text != "" && b2.Text != "" && b3.Text != "" && b4.Text != "" && b5.Text != "" && b6.Text != "" && b7.Text != "" && b8.Text != "" && b9.Text != "")
                 {
-                    DialogResult dialogResult = MessageBox.Show("You want to play another game?", "No winner", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Do you want to play another game?", "No winner", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
                         EmptyBoard();
@@ -98,7 +97,8 @@ namespace WindowsFormsApp2
             {
                 MessageBox.Show("Oops! Something went wrong!");
                 Application.Exit();
-            }   
+            }
+            score.Text = "Score: X = " + ScoreX + " | O = " + ScoreO;
         }
 
         private void bretry_Click(object sender, EventArgs e)
@@ -118,10 +118,6 @@ namespace WindowsFormsApp2
             b7.Text = "";
             b8.Text = "";
             b9.Text = "";
-        }
-        public void ScoreBoard()
-        {
-            score.Text = "Score: X = " + ScoreX + " | O = " + ScoreO;
         }
     }
 }
