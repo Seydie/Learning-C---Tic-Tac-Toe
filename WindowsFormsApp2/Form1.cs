@@ -44,10 +44,13 @@ namespace WindowsFormsApp2
             {
                 Button b = sender as Button;
 
-                if (Player1 == true)
+                if (Player1 == true && b.Text == "")
                 {
                     b.Text = "X";
                     Player1 = false;
+                }
+                else if (b.Text == "X" || b.Text == "O") {
+                    MessageBox.Show("Oops!");
                 }
                 else
                 {
