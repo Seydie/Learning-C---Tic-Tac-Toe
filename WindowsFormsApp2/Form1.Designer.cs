@@ -149,6 +149,7 @@
             this.bretry.TabIndex = 11;
             this.bretry.Text = "Retry";
             this.bretry.UseVisualStyleBackColor = true;
+            this.bretry.Click += new System.EventHandler(this.bretry_Click);
             // 
             // Form
             // 
